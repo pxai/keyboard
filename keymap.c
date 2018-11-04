@@ -3,7 +3,7 @@
 #include "action_layer.h"
 #include "version.h"
 #include "keymap_spanish.h"
-# based on https://github.com/johgh/keyboard/blob/master/ergodox/dvorak_spanish/keymap.c
+// based on https://github.com/johgh/keyboard/blob/master/ergodox/dvorak_spanish/keymap.c
 
 #define BASE 0 // default layer
 #define SYMB 1 // symbols
@@ -32,13 +32,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |   ESC  |   1  |   2  |   3  |   4  |   5  |  TAB |           | BSPC |   6  |   7  |   8  |   9  |   0  |   "    |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |  TRANS |   Q  |   W  |   E  |   R  |   T  |  {   |           |  }   |   Y  |   U  |   I  |   O  |   P  |   '    |
+ * |  º/ª | |   Q  |   W  |   E  |   R  |   T  |  {   |           |  }   |   Y  |   U  |   I  |   O  |   P  |   '    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |Esc/Ctrl|   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   Ñ  | tilde  |
  * |--------+------+------+------+------+------|  (   |           |  )   |------+------+------+------+------+--------|
  * |   LSft |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   -  |  RSft  |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | chang| ctrl |alt   | PGUP | END  |                                       | LEFT | DOWN |  UP  |RIGHT |]/LALT|
+ *   | chang| CTRL | ALT  | [    |   ]  |                                       | LEFT | DOWN |  UP  |RIGHT |  ¡¿   |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |  <   |  =   |       |   /  |  >   |
@@ -57,10 +57,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = LAYOUT_ergodox(  // layer 0 : default
         // left hand
           KC_ESC,       KC_1,   KC_2,   KC_3,   KC_4,   KC_5,   KC_TAB,
-          KC_TRNS,        KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,   M(OBRACE),
+          KC_GRAVE,        KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,   M(OBRACE),
           CTL_T(KC_ESC),  KC_A,   KC_S,   KC_D,   KC_F,   KC_G,
           KC_LSFT,      KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   LSFT(KC_8),
-          M(OBRACK),      KC_HOME,KC_PGDN,KC_PGUP,KC_END,
+          KC_FN1,      KC_LCTL,KC_LALT,M(OBRACK),M(CBRACK),
                                                                     KC_NONUS_BSLASH,  KC_RPRN,
                                                                       ALL_T(KC_RBRACKET),
                                                                       KC_SPC,KC_ENT,KC_PAST,
@@ -69,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                       M(CBRACE),   KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,  KC_MINUS,
                                  KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,CTL_T(KC_QUOTE),
                       LSFT(KC_9),   KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,KC_RSFT,
-                                         KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,M(CBRACK),
+                                         KC_LEFT,KC_DOWN,KC_UP,KC_RIGHT,KC_EQL,
           KC_PSLS, LSFT(KC_NONUS_BSLASH),
           KC_SLSH,
           LSFT(KC_SLSH),LSFT(KC_COMM), KC_SPC
