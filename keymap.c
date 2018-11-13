@@ -71,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                       LSFT(KC_9),   KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,KC_RSFT,
                                          KC_LEFT,KC_DOWN,KC_UP,KC_RIGHT,KC_EQL,
           KC_PSLS, LSFT(KC_NONUS_BSLASH),
-          KC_SLSH,
+          KC_LGUI,
           LSFT(KC_SLSH),LSFT(KC_COMM), KC_SPC
     ),
 /* Keymap 1: Symbol Layer
@@ -85,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |---------+------+------+------+------+------|      |           |ENTER |------+------+------+------+------+--------|
  * |         |   %  |   ^  |   [  |   ]  |   ~  |      |           |      |   &  |   1  |   2  |   3  |   \  |        |
  * `---------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | EPRM  |      |      |      |      |                                       |  -   |    . |   0  |   =  |      |
+ *   | EPRM  |home  | Pgup | PgDn | end  |                                       |  -   |    . |   0  |   =  |      |
  *   `-----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |Animat|      |       |Toggle|Solid |
@@ -101,7 +101,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        VRSN,   KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_TRNS,
        KC_PIPE,M(ES_ATIL),KC_AT,  KC_LCBR,KC_RCBR,KC_PIPE,KC_TRNS,
        KC_BSLS,KC_HASH,KC_DLR, KC_LPRN,KC_RPRN,KC_GRV,
-       KC_GRV,KC_PERC,KC_CIRC,KC_LBRC,KC_RBRC,KC_TILD,KC_TRNS,
+       KC_GRV,KC_PERC,KC_CIRC,KC_LBRC,KC_RBRC,KC_TILD,KC_LALT,
           KC_FN1, KC_HOME, KC_PGDN, KC_PGUP, KC_END,
                                        RGB_MOD,KC_TRNS,
                                                KC_TRNS,
